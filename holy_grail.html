@@ -1,0 +1,43 @@
+<!doctype html>
+<title>Example</title>
+<style>
+  * {
+   box-sizing: border-box; 
+  }
+  body {
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    min-height: calc(100vh - 12vh);
+  }
+  #main > article {
+    flex: 1;
+    overflow-y: scroll;
+  }
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 20vw;
+    background: beige;
+  }
+  #main > nav {
+    order: -1;
+  }
+  header, footer, article, nav, aside {
+    padding: 1em;
+  }
+  header, footer {
+    background-color: #362233;
+    color: #FFFFFF;
+    height: 6vh;
+  }
+</style>
+<body>
+  <header>Header</header>
+  <div id="main">
+    <article><%= yield %></article>
+    <nav>Nav</nav>
+    <aside>Aside</aside>
+  </div>
+  <footer>Footer</footer>
+</body>
