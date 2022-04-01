@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <link rel='stylesheet' src='/css/style.css'/>
+    <style>
+    body {
+      margin: 10px;
+      font-family: 'Abel';
+      text-align: center;
+      width: 98%;
+    }
+
+    .container {
+      display: grid;
+      grid-gap: 5px;
+      /*justify-content: space-around;*/
+      justify-content: center;
+      align-content: space-evenly;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas: "header  header   header" 
+                           "content content  advert" 
+                           "content content  advert" 
+                           "footer  footer   footer";
+    }
+
+    .item {
+      color: white;
+      padding: 1.5em 0;
+      font-size: 2em;
+    }
+
+    .header { background: #0d9; }
+    .content { background: #9d0; }
+    .advert { background: #d90; }
+    .footer { background: #90d; }
+
+    .header { grid-area: header;}
+    .advert { grid-area: advert; }
+    .content { grid-area: content; height: 50vh; }
+    .footer { grid-area: footer; height: 0.5vh;}    
+    
+</style>
+  </head>
+  <body>    
+    <div class="container">
+      <div class="item header">Header</div>
+      <div class="item content">Content
+      <h1>Using Named Grid Areas</h1>
+      </div>
+      <div class="item advert">Advert</div>
+      <div class="item footer">Footer</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+# Id$ nonnax 2022-03-31 15:15:02 +0800
+<head>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f2f2f2;
+  }
+
+  .box {
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    background-color: #efefef;
+  }
+
+  .tweets   { background-color: #A2DED0; }
+  .replies  { background-color: #F4D03F; }
+  .search   { background-color: #6C7A89; }
+  .messages { background-color: #59ABE3; }
+
+  /* Our Grid Code */
+  .app-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100vh;
+    grid-template-areas: "search replies messages tweets";    
+  }
+</style>
+</head>
+<body>
+<div class="app-layout">
+  <div class="tweets box">Tweets</div>
+  <div class="replies box">Replies</div>
+  <div class="search box">Search</div>
+  <div class="messages box">Messages</div>
+</div>
+</body>

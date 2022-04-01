@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <link rel='stylesheet' src='/css/style.css'/>
+    <style>
+body {
+  margin: 10px;
+  font-family: 'Abel';
+  text-align: center;
+  width: 98%;
+}
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: [head-col-start] 180px [content-col-start] auto [content-col-mid] 180px [head-col-end];
+  grid-template-rows: [head-row-start] auto [head-row-end] auto [content-row-end] auto [footer-row-end];  
+}
+
+.item {
+  color: white;
+  padding: 1.5em 0;
+  font-size: 2em;
+}
+
+.header {
+  background: #0d9;
+}
+
+.sidebar {
+  background: #d90;
+}
+
+.content {
+  background: #9d0;
+}
+
+.footer {
+  background: #90d;
+}
+
+.header {
+  grid-column: head-col-start / head-col-end;
+  grid-row: head-row-start / head-row-end;
+}
+
+.sidebar {
+  grid-column: head-col-start / content-col-start;
+  grid-row: head-row-end / content-row-end;
+}
+
+.content {
+  grid-column: content-col-start / head-col-end;
+  grid-row: head-row-end / content-row-end;
+  height: 180px;
+}
+
+.footer {
+  grid-column: head-col-start / head-col-end;
+  grid-row: content-row-end / footer-row-end;
+}    
+    </style>
+  </head>
+  <body>
+<h1>Using Named Lines</h1>
+<div class="container">
+  <div class="item header">Header</div>
+  <div class="item sidebar">Sidebar</div>
+  <div class="item content">Content</div>
+  <div class="item footer">Footer</div>
+</div>
+  </body>
+</html>
